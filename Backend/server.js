@@ -5,7 +5,11 @@ const db = require('./database'); // Importa a conexão com o SQLite
 const app = express();
 
 // Middlewares obrigatórios
-app.use(cors()); // Permite que o Frontend (porta 5173) converse com o Backend (porta 5000)
+app.use(cors({
+    origin: '*', 
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+})); // Permite que o Frontend converse com o Backend (porta 5000)
 app.use(express.json()); // Permite que o servidor entenda os dados em formato JSON
 
 // ==========================================
