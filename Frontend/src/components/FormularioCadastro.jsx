@@ -15,7 +15,7 @@ function FormularioCadastro() {
         setStatus({ tipo: '', mensagem: '' }); // Limpa mensagens anteriores
 
         try {
-            const resposta = await axios.post('http://localhost:5000/api/cadastro', dados);
+            const resposta = await axios.post('/api/cadastro', dados);
             setStatus({ tipo: 'sucesso', mensagem: resposta.data.mensagem || 'Cadastro realizado com sucesso!' });
             reset(); // Limpa o formulário
         } catch (erro) {
@@ -70,7 +70,7 @@ function FormularioCadastro() {
                         type="password"
                         {...register("senha", {
                             required: "A senha é obrigatória.",
-                            minLength: { value: 8, message: "A senha deve ter no mínimo 8 caracteres." }
+                            minLength: { value: 5, message: "A senha deve ter no mínimo 8 caracteres." }
                         })}
                     />
                     {errors.senha && <span className="erro-mensagem">{errors.senha.message}</span>}
