@@ -15,7 +15,7 @@ function FormularioCadastro() {
         setStatus({ tipo: '', mensagem: '' }); // Limpa mensagens anteriores
 
         try {
-            const resposta = await axios.post('/api/cadastro', dados);
+            const resposta = await axios.post('https://autenticacaoatv.onrender.com', dados);
             setStatus({ tipo: 'sucesso', mensagem: resposta.data.mensagem || 'Cadastro realizado com sucesso!' });
             reset(); // Limpa o formulário
         } catch (erro) {
