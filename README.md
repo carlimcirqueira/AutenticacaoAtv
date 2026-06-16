@@ -1,4 +1,8 @@
 
+A estrutura do código-fonte está dividida de forma estritamente modular entre os diretórios /Frontend e /Backend na raiz do projeto.  
+🚀 Links do Deploy
+💻 Frontend (Interface): https://autenticacao-atv.vercel.app/
+Backend (API/Servidor): https://autenticacaoatv.onrender.com
 
 Aplicação full-stack para cadastro e listagem de usuários com paginação, utilizando React no frontend e Node.js + Express + SQLite no backend.
 
