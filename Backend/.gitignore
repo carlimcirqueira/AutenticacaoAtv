@@ -1,2 +1,32 @@
-Backend/node_modules/
-Frontend/node_modules/
+# Dependências (Obrigatório para evitar o erro de ELF header)
+node_modules/
+
+# Banco de dados local (SQLite)
+# Evita enviar o seu banco de dados local com dados de teste para o GitHub
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+usuarios.db
+
+# Arquivos de configuração de ambiente (Variáveis secretas)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs do Node/NPM
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# Pastas de cobertura de testes (se usar Jest/Vitest no futuro)
+coverage/
+.nyc_output/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
