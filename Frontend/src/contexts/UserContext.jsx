@@ -13,7 +13,7 @@ export function UserProvider({ children }) {
         setCarregando(true);
         setErro('');
         try {
-            const resposta = await axios.get('/api/usuarios', {
+            const resposta = await axios.get('https://autenticacaoatv.onrender.com/api/usuarios', {
                 params: { pagina, limite }
             });
             setUsuarios(resposta.data.usuarios);
