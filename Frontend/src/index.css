@@ -4,14 +4,147 @@
   box-sizing: border-box;
 }
 
+/* ============================================
+   TEMA DARK (padrão)
+   ============================================ */
+:root,
+[data-tema="dark"] {
+  --bg-gradient-1: #0f0c29;
+  --bg-gradient-2: #302b63;
+  --bg-gradient-3: #24243e;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: rgba(0, 0, 0, 0.4);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-dim: rgba(255, 255, 255, 0.4);
+  --text-very-dim: rgba(255, 255, 255, 0.3);
+  --input-bg: rgba(255, 255, 255, 0.06);
+  --input-border: rgba(255, 255, 255, 0.12);
+  --input-focus-border: #818cf8;
+  --input-focus-shadow: rgba(129, 140, 248, 0.15);
+  --input-autofill-bg: #302b63;
+  --btn-gradient-1: #667eea;
+  --btn-gradient-2: #764ba2;
+  --btn-shadow: rgba(102, 126, 234, 0.4);
+  --btn-bg-toggle: rgba(255, 255, 255, 0.06);
+  --btn-border-toggle: rgba(255, 255, 255, 0.12);
+  --btn-toggle-ativo-bg: rgba(239, 68, 68, 0.1);
+  --btn-toggle-ativo-border: rgba(239, 68, 68, 0.25);
+  --btn-toggle-ativo-color: #fca5a5;
+  --divider-color: rgba(255, 255, 255, 0.15);
+  --table-header-color: rgba(255, 255, 255, 0.4);
+  --table-border: rgba(255, 255, 255, 0.08);
+  --table-row-hover: rgba(255, 255, 255, 0.04);
+  --table-text: rgba(255, 255, 255, 0.8);
+  --table-text-muted: rgba(255, 255, 255, 0.5);
+  --table-text-dim: rgba(255, 255, 255, 0.3);
+  --spinner-border: rgba(255, 255, 255, 0.1);
+  --spinner-top: #818cf8;
+  --alerta-sucesso-bg: rgba(34, 197, 94, 0.15);
+  --alerta-sucesso-border: rgba(34, 197, 94, 0.3);
+  --alerta-sucesso-color: #4ade80;
+  --alerta-erro-bg: rgba(239, 68, 68, 0.15);
+  --alerta-erro-border: rgba(239, 68, 68, 0.3);
+  --alerta-erro-color: #f87171;
+  --lista-conteudo-bg: rgba(255, 255, 255, 0.04);
+  --lista-conteudo-border: rgba(255, 255, 255, 0.1);
+  --btn-outline-border: rgba(255, 255, 255, 0.1);
+  --btn-outline-bg: rgba(255, 255, 255, 0.04);
+  --btn-outline-color: rgba(255, 255, 255, 0.6);
+  --btn-outline-hover-bg: rgba(255, 255, 255, 0.1);
+  --btn-outline-hover-border: rgba(255, 255, 255, 0.2);
+  --btn-outline-hover-color: #ffffff;
+  --btn-atualizar-border: rgba(255, 255, 255, 0.15);
+  --btn-atualizar-bg: rgba(255, 255, 255, 0.06);
+  --btn-atualizar-color: rgba(255, 255, 255, 0.6);
+  --btn-atualizar-hover-bg: rgba(255, 255, 255, 0.12);
+  --btn-atualizar-hover-color: #ffffff;
+  --tema-btn-border: rgba(255, 255, 255, 0.12);
+  --tema-btn-bg: rgba(255, 255, 255, 0.06);
+  --tema-btn-color: rgba(255, 255, 255, 0.85);
+  --tema-btn-hover-bg: rgba(255, 255, 255, 0.1);
+  --tema-btn-hover-border: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   TEMA LIGHT (claro)
+   ============================================ */
+[data-tema="light"] {
+  --bg-gradient-1: #e8ecf4;
+  --bg-gradient-2: #d1d9e6;
+  --bg-gradient-3: #c9d2e0;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(255, 255, 255, 0.5);
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: rgba(0, 0, 0, 0.12);
+  --text-primary: #1a1a2e;
+  --text-secondary: rgba(26, 26, 46, 0.7);
+  --text-muted: rgba(26, 26, 46, 0.5);
+  --text-dim: rgba(26, 26, 46, 0.4);
+  --text-very-dim: rgba(26, 26, 46, 0.3);
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --input-border: rgba(26, 26, 46, 0.15);
+  --input-focus-border: #667eea;
+  --input-focus-shadow: rgba(102, 126, 234, 0.2);
+  --input-autofill-bg: #e8ecf4;
+  --btn-gradient-1: #667eea;
+  --btn-gradient-2: #764ba2;
+  --btn-shadow: rgba(102, 126, 234, 0.3);
+  --btn-bg-toggle: rgba(255, 255, 255, 0.6);
+  --btn-border-toggle: rgba(26, 26, 46, 0.15);
+  --btn-toggle-ativo-bg: rgba(239, 68, 68, 0.08);
+  --btn-toggle-ativo-border: rgba(239, 68, 68, 0.2);
+  --btn-toggle-ativo-color: #dc2626;
+  --divider-color: rgba(26, 26, 46, 0.15);
+  --table-header-color: rgba(26, 26, 46, 0.4);
+  --table-border: rgba(26, 26, 46, 0.08);
+  --table-row-hover: rgba(26, 26, 46, 0.04);
+  --table-text: rgba(26, 26, 46, 0.8);
+  --table-text-muted: rgba(26, 26, 46, 0.5);
+  --table-text-dim: rgba(26, 26, 46, 0.3);
+  --spinner-border: rgba(26, 26, 46, 0.1);
+  --spinner-top: #667eea;
+  --alerta-sucesso-bg: rgba(34, 197, 94, 0.12);
+  --alerta-sucesso-border: rgba(34, 197, 94, 0.3);
+  --alerta-sucesso-color: #16a34a;
+  --alerta-erro-bg: rgba(239, 68, 68, 0.1);
+  --alerta-erro-border: rgba(239, 68, 68, 0.25);
+  --alerta-erro-color: #dc2626;
+  --lista-conteudo-bg: rgba(255, 255, 255, 0.5);
+  --lista-conteudo-border: rgba(255, 255, 255, 0.7);
+  --btn-outline-border: rgba(26, 26, 46, 0.15);
+  --btn-outline-bg: rgba(26, 26, 46, 0.04);
+  --btn-outline-color: rgba(26, 26, 46, 0.6);
+  --btn-outline-hover-bg: rgba(26, 26, 46, 0.08);
+  --btn-outline-hover-border: rgba(26, 26, 46, 0.2);
+  --btn-outline-hover-color: #1a1a2e;
+  --btn-atualizar-border: rgba(26, 26, 46, 0.15);
+  --btn-atualizar-bg: rgba(26, 26, 46, 0.05);
+  --btn-atualizar-color: rgba(26, 26, 46, 0.6);
+  --btn-atualizar-hover-bg: rgba(26, 26, 46, 0.1);
+  --btn-atualizar-hover-color: #1a1a2e;
+  --tema-btn-border: rgba(26, 26, 46, 0.15);
+  --tema-btn-bg: rgba(255, 255, 255, 0.6);
+  --tema-btn-color: rgba(26, 26, 46, 0.8);
+  --tema-btn-hover-bg: rgba(255, 255, 255, 0.8);
+  --tema-btn-hover-border: rgba(26, 26, 46, 0.25);
+}
+
+/* ============================================
+   ESTILOS GLOBAIS
+   ============================================ */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3));
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  transition: background 0.4s ease;
 }
 
 #root {

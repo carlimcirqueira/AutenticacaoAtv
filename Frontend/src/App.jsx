@@ -1,22 +1,27 @@
 import React from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
 import { UserProvider } from './contexts/UserContext';
+import BotaoTema from './components/BotaoTema';
 import FormularioCadastro from './components/FormularioCadastro';
 import ListaUsuarios from './components/ListaUsuarios';
 import './App.css';
 
 function App() {
   return (
-    <UserProvider>
-      <div className="app-container">
-        <div className="app-layout">
-          <FormularioCadastro />
-          <div className="app-divider">
-            <span>ou</span>
+    <ThemeProvider>
+      <UserProvider>
+        <div className="app-container">
+          <div className="app-layout">
+            <BotaoTema />
+            <FormularioCadastro />
+            <div className="app-divider">
+              <span>ou</span>
+            </div>
+            <ListaUsuarios />
           </div>
-          <ListaUsuarios />
         </div>
-      </div>
-    </UserProvider>
+      </UserProvider>
+    </ThemeProvider>
   );
 }
 
